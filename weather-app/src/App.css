@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  transition: background 1.5s ease;
+}
+
+.inner {
+  width: 100%;
+  max-width: 480px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 200;
+  letter-spacing: 8px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.search-wrapper {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.search-row {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid #ffffff50;
+  background: #00000020;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  backdrop-filter: blur(10px);
+  transition: all 0.2s;
+}
+
+input::placeholder {
+  color: #ffffff90;
+}
+
+input:focus {
+  border-color: #ffffff80;
+  background: #00000030;
+}
+
+button {
+  padding: 14px 22px;
+  background: #00000025;
+  color: white;
+  border: 1px solid #ffffff50;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  backdrop-filter: blur(10px);
+  white-space: nowrap;
+}
+
+button:hover {
+  background: #00000035;
+  transform: translateY(-1px);
+}
+
+.suggestions {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: #00000030;
+  backdrop-filter: blur(20px);
+  border: 1px solid #ffffff30;
+  border-radius: 14px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.suggestion-item {
+  padding: 12px 18px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #ffffff15;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background: #00000025;
+}
+
+.loading {
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.error {
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  background: #00000025;
+  border: 1px solid #ffffff30;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.weather-card {
+  background: #00000015;
+  backdrop-filter: blur(20px);
+  border: 1px solid #ffffff30;
+  border-radius: 24px;
+  padding: 32px;
+  text-align: center;
+  color: white;
+}
+
+.emoji {
+  font-size: 4rem;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+}
+
+.weather-card h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.temp {
+  font-size: 5rem;
+  font-weight: 200;
+  letter-spacing: -2px;
+  margin-bottom: 8px;
+  color: white;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.condition {
+  font-size: 1rem;
+  color: #ffffffcc;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin-bottom: 28px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.detail {
+  background: #00000015;
+  border: 1px solid #ffffff25;
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.detail span:first-child {
+  color: #ffffffaa;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.detail span:last-child {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 400px) {
+  .temp {
+    font-size: 4rem;
+  }
+
+  .weather-card {
+    padding: 24px 16px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
