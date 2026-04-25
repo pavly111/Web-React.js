@@ -10,7 +10,7 @@ import path from 'path'
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname)
 
-const projectsDir = path.resolve(__dirname, '../React (Projects)')
+const projectsDir = __dirname
 const portalDir = __dirname
 const distDir = path.resolve(portalDir, 'dist')
 const stagingDir = path.resolve(portalDir, '.sub-dists')
@@ -38,7 +38,7 @@ fs.mkdirSync(stagingDir, { recursive: true })
 // 2. Build each sub-project with correct base path, stage them
 for (const project of projects) {
   const projectPath = path.join(projectsDir, project)
-  const basePath = `/web-react/${project}/`
+const basePath = `/Web-React.js/${project}/`
 
   console.log(`\n🔨 Building ${project} with base="${basePath}"...`)
 
