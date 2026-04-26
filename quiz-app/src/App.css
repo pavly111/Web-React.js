@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0a1a, #0d1f2d);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.container {
+  background: #0f1f2f;
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 40px rgba(0, 200, 255, 0.15);
+}
+
+.question-count {
+  color: #00c8ff;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.question {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.answer-btn {
+  background: #0a1525;
+  color: white;
+  border: 2px solid #ffffff15;
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.answer-btn:hover {
+  border-color: #00c8ff;
+}
+
+.answer-btn.correct {
+  background: #0a2a1a;
+  border-color: #39ff14;
+  color: #39ff14;
+}
+
+.answer-btn.wrong {
+  background: #2a0a0a;
+  border-color: #ff69b4;
+  color: #ff69b4;
+}
+
+.btn {
+  background: linear-gradient(135deg, #00c8ff, #0077ff);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width: 100%;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+}
+
+.score {
+  color: #39ff14;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+h1 {
+  color: #00c8ff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.upload-area {
+  border: 2px dashed #00c8ff;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  color: #888;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.2s;
+}
+
+.upload-area:hover {
+  border-color: #39ff14;
+  color: white;
+}
+
+.upload-area input {
+  display: none;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #00c8ff;
+  border: 2px solid #00c8ff;
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-outline:hover {
+  background: #00c8ff;
+  color: #0a0a1a;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #ffffff15;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00c8ff, #39ff14);
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.message {
+  color: #ff69b4;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+}
